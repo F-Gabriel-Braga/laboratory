@@ -1,0 +1,191 @@
+<h2>Diretivas</h2>
+<p>
+    São classes que adicionam comportamentos adicionais aos elemenetos em aplicativos Angular.
+</p>
+<ul>
+    <li>Diretivas estruturais</li>
+    <li>Diretivas de atributos</li>
+</ul>
+<hr>
+
+<h2>Diretivas Estruturais</h2>
+<p>
+    Eles moldam ou remodelam a estrutura do elemento, adicionando, removendo ou manipulando esses elementos. São eles: NgIf, NgFor e NgSwitch.
+</p>
+<hr>
+
+<h2>Diretivas de Atributos</h2>
+<p>
+    Alteram a aparência ou comportamento de um elemento ou componente ou outra diretiva. São eles: NgStyle, NgClass e NgModel.
+</p>
+<hr>
+
+<h2>Diretivas Customizadas</h2>
+<p>
+    As diretivas customizadas nos permitem manipular a estilização de elementos do HTML, ouvir eventos da DOM, adicionar ou remover classes e inserir novos atributos. Para gerar uma nova diretiva, utiliza-se o comando <strong>ng g d nome-diretiva</strong>.
+</p>
+<hr>
+
+<h2>NgIf</h2>
+<p *ngIf="visivel"> <!--true -> mostrar o elemento / false -> não mostrar o elemento-->
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint eligendi sunt dicta eveniet. Quidem ipsa autem officiis, eum deleniti magni dolor nam, facere, sequi aspernatur doloremque facilis ratione saepe. Aut?
+</p>
+<button (click)="alterarVisualizacao()">Ocultar / Mostrar</button>
+
+<br>
+<!--<h3 *ngIf="false; else falso">Verdadeiro</h3>
+<ng-template #falso>
+    <h3>Falso</h3>
+</ng-template>-->
+<h3 *ngIf="false">Verdadeiro</h3>
+<h3 *ngIf="!false">Falso</h3>
+<br>
+
+<img src="/assets/sapo-1.jpg" width="400" *ngIf="parado">
+<img src="/assets/sapo-2.jpg" width="400" *ngIf="!parado">
+<br><button (click)="alterarSapo()">Saltar / Pousar</button>
+<hr>
+
+<h2>NgFor</h2>
+<h3>Lista de Compras</h3>
+<ul>
+    <li *ngFor="let item of listaCompras; let i = index">{{i+1}} - {{ item }}</li>
+</ul>
+<input type="text" [(ngModel)]="itemDigitado">
+<button (click)="adicionarItem()">Adicionar</button>
+<hr>
+
+<h2>NgSwicth</h2>
+<h3>Converter numero em mês</h3>
+<div [ngSwitch]="mes">
+    <p *ngSwitchCase="1">Janeiro</p>
+    <p *ngSwitchCase="2">Fevereiro</p>
+    <p *ngSwitchCase="3">Março</p>
+    <p *ngSwitchCase="4">Abril</p>
+    <p *ngSwitchCase="5">Maio</p>
+    <p *ngSwitchCase="6">Junho</p>
+    <p *ngSwitchCase="7">Julho</p>
+    <p *ngSwitchCase="8">Agosto</p>
+    <p *ngSwitchCase="9">Setembro</p>
+    <p *ngSwitchCase="10">Outubro</p>
+    <p *ngSwitchCase="11">Novembro</p>
+    <p *ngSwitchCase="12">Dezembro</p>
+    <p *ngSwitchDefault>Digite um numero valido!</p>
+</div>
+<input type="text" #campoMes>
+<button (click)="converterMes(campoMes.value)">Converter</button>
+<hr>
+
+<h2>NgClass</h2>
+<div style="width: 300px; height: 300px;" [ngClass]="{
+    'enabled': habilitado,
+    'disabled': !habilitado
+}">
+</div>
+<button (click)="habilitarDesabilitar()">Habilitar / Desabilitar</button>
+<hr>
+
+<h2>NgStyle</h2>
+<div [ngStyle]="{
+    'background-color': 'gray',
+    'border-radius': '50%',
+    'width': size,
+    'height': size
+}">
+</div>
+
+<input type="range" min="50" max="300" (change)="alterarTamanho(campoSize.value)" #campoSize>
+<hr>
+
+<h2>NgModel</h2>
+{{ texto }} <br>
+<!--Banana na Caixa-->
+<input type="text" [(ngModel)]="texto">
+<hr>
+
+<h2>ng-template</h2>
+<p *ngIf="false; else texto2">
+    1 - Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, consequuntur, necessitatibus consectetur laboriosam fuga laborum magni impedit tempora dignissimos officia vero! Minima fuga placeat quas ea quis a, ipsa esse.
+</p>
+<ng-template #texto2>
+    <p>
+        2 - Lorem, ipsum dolor sit amet consectetur adipisicing elit. Non sit excepturi ducimus maiores. Quibusdam maiores quasi minima provident accusamus quaerat incidunt obcaecati quos animi adipisci, accusantium voluptates cumque officia rerum?
+    </p>
+</ng-template>
+<hr>
+
+<h2>ng-container</h2>
+<ng-container [ngSwitch]="1">
+    <p *ngSwitchCase="1">Janeiro</p>
+    <p *ngSwitchCase="2">Fevereiro/p>
+    <p *ngSwitchCase="3">Março</p>
+</ng-container>
+<hr>
+
+<h2>ng-content</h2>
+<app-teste>
+    <h3>Component teste 2!</h3>
+    <p>Paragrafo de teste!</p>
+    <div class="p2">
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, pariatur. Magni hic ex obcaecati, libero ut culpa, temporibus fugit provident alias aperiam ipsam! Alias commodi dicta impedit corrupti quo magnam.]
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere earum rem harum quisquam cumque quae sequi. Quas vero assumenda quos impedit id aliquid cumque dolorem. Molestias porro sunt sequi voluptates.
+        </p>
+    </div>
+</app-teste>
+<hr>
+
+<h2>Diretivas Customizadas (Pink)</h2>
+<h3 pink>Titulo</h3>
+<p pink>
+    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati sint soluta magni delectus ratione numquam! Sunt, reiciendis corporis facilis nesciunt, libero totam amet expedita, non est quasi a quaerat quis!
+</p>
+<h4 pink>Titlo 2</h4>
+<hr>
+
+<h2 [highlight]="color">Diretivas Customizadas (Mouse Highlight)</h2>
+<h3 [highlight]="color">Titulo teste</h3>
+<p [highlight]="color">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt repellat soluta culpa harum rerum nostrum officiis sapiente voluptas quam, possimus suscipit asperiores quod quo nulla ab, dignissimos quia maxime? Illum.
+</p>
+<input type="text" #campoColor>
+<button (click)="aplicarCor(campoColor.value)">Aplicar Cor</button>
+<hr>
+
+<h2>Diretivas Customizadas (Texto Azul)</h2>
+<h3 textBlue>Titulo</h3>
+
+<!--<ng-templ [ngIf]="true"></ng-templ>-->
+
+<!--
+<hr>
+
+<ng-template [ngIf]="false" [ngIfElse]="texto2">
+    <p>
+        1 - Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, consequuntur, necessitatibus consectetur laboriosam fuga laborum magni impedit tempora dignissimos officia vero! Minima fuga placeat quas ea quis a, ipsa esse.
+    </p>
+</ng-template>
+<ng-template #texto2>
+    <p>
+        2 - Lorem, ipsum dolor sit amet consectetur adipisicing elit. Non sit excepturi ducimus maiores. Quibusdam maiores quasi minima provident accusamus quaerat incidunt obcaecati quos animi adipisci, accusantium voluptates cumque officia rerum?
+    </p>
+</ng-template>
+
+<hr>
+
+<ul>
+    <li *ngFor="let item of listaCompras">{{ item }}</li>
+</ul>
+
+<hr>
+
+<ul>
+    <ng-template ngFor [ngForOf]="listaCompras" let-item>
+        <li>
+            {{ item }}
+        </li>
+    </ng-template>
+</ul>
+-->

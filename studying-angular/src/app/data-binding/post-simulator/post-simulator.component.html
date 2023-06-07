@@ -1,0 +1,19 @@
+<div id="container">
+    <h1>Post Simulator</h1>
+    <h3>Nome:</h3>
+    <input type="text" name="autor" [(ngModel)]="autor">
+    <h3>Legenda:</h3>
+    <input type="text" name="legenda" [(ngModel)]="legenda">
+    <h3>Imagem (URL):</h3>
+    <input type="url" name="imagem" [(ngModel)]="imagem">
+    <br><br>
+    <div id="post">
+        <h2>Autor: {{ autor }}</h2>
+        <div id="img">
+            <img [src]="imagem" alt="Imagem">
+        </div>
+        <div id="paragrafo">
+            <p><strong>Legenda:</strong> {{ legenda }}</p>
+        </div>
+    </div>
+</div>

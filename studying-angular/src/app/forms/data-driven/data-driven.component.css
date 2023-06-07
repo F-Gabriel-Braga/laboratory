@@ -1,0 +1,15 @@
+input.item {
+    margin-bottom: 15px;
+}
+
+small.text-danger {
+    display: none;
+}
+
+.error input.ng-invalid.ng-touched {
+    border: 1px solid red;
+}
+
+.error small.text-danger {
+    display: block;
+}

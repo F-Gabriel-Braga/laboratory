@@ -1,0 +1,67 @@
+<h3>Ciclos de vida de um componente</h3>
+<p>
+    Eventos de cliclo de vida ocorrem quando um comportamento é renderizado, criado, alterado ou destruido. Cada método está associado a uma interface e cada interface está associada a um único método.
+</p>
+<hr>
+
+<h3>ngOnChanges</h3>
+<p>
+    É executado quando uma propriedade decorada com @Input() é alterada.
+</p>
+<hr>
+
+<h3>ngOnInit</h3>
+<p>
+    É executado ao inicializar o componente. Após o ngOnChanges.
+</p>
+<hr>
+
+<h3>ngDoCheck</h3>
+<p>
+    Executa logo após a detecção de alterações nas propriedades do componente.
+</p>
+<hr>
+
+<h3>ngAfterContentInit</h3>
+<p>
+    Responder após o Angular projetar conteúdo externo na exibição do componente.
+</p>
+<hr>
+
+<h3>ngAfterContentChecked</h3>
+<p>
+    Reponder após o Angular verificar alterações no conteúdo externo exibido no componete.
+</p>
+<hr>
+
+<h3>ngAfterViewInit</h3>
+<p>
+    Responder após o Angular inicializar as exibições do componente e filhos.
+</p>
+<hr>
+
+<h3>ngAfterViewChecked</h3>
+<p>
+    Responder logo após o Angular verificar modificações na visualização do componente.
+</p>
+<hr>
+
+<h3>ngOnDestroy</h3>
+<p>
+    Executa logo após o componente ser destruido.
+</p>
+<hr>
+
+<h3>Exemplos</h3>
+<app-auxiliar [valor]="n" *ngIf="mostrar">
+    <app-titulo></app-titulo>
+</app-auxiliar>
+<br>
+<button (click)="alterarContainer()">Criar / Destruir</button>
+<br>
+<button (click)="acrecentar()">Acrescentar</button>
+<br>
+
+<p>{{ texto }}</p>
+<input type="text" #campoTexto>
+<button (click)="alterarTexto(campoTexto.value)">Alterar texto</button>

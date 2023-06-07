@@ -1,0 +1,29 @@
+<h2>Servies</h2>
+<p>
+    Um Service Angular é uma objeto que fornece fornece funções para manipulação de dados. Essas funções podem ser chamadas pelos componentes da aplicação. Os Services encapsulam os recursos da aplicação para que possam ser utilizados em multiplos modulos. Para criar um novo Service com Angular CLI execute o comando <strong>ng generate service [nome do serviço] / ng g s [nome do serviço]</strong>.
+</p>
+<hr>
+
+<h2>Foods</h2>
+<ul>
+    <li *ngFor="let food of listFood">{{food.id}} {{food.name}} ({{food.description}}), {{food.calories}}kcal</li>
+</ul>
+
+<hr>
+
+<h2>Pesquisa</h2>
+<input type="text" #campoFood (keyup)="searchFood(campoFood.value)">
+<button (click)="searchFood(campoFood.value)">Pesquisa</button>
+
+<hr>
+
+<h2>Cadastro de Food</h2>
+<form [formGroup]="form" (ngSubmit)="adicionarFood()">
+    <label for="name">Nome:</label><br>
+    <input type="text" id="name" formControlName="name"><br><br>
+    <label for="description">Descrição</label><br>
+    <input type="text" id="description" formControlName="description"><br><br>
+    <label for="calories">Calorias</label><br>
+    <input type="number" id="colories" formControlName="calories"><br><br>
+    <button type="submit">Adicionar</button>
+</form>

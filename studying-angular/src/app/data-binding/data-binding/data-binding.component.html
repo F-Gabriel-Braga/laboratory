@@ -1,0 +1,67 @@
+<h3>O que é Data Binding?</h3>
+<p>
+    A vinculação de dados mantém sua página atualizada automaticamente com base no estado do seu aplicativo. Você usa vinculação de dados para especificar coisas como a origem de uma imagem, o estado de um botão ou dados de um usuário específico.
+</p>
+<hr>
+
+<h3>Tipos de Data Binding</h3>
+<dl>
+    <dt>Interpolation</dt>
+    <dd>
+        Interpolation é do tipo one way data binding, ou seja, o dado é apenas apresentado na tela para o usuário, sem alteração do valor internamente.
+        Para fazer essa interpolação, use chaves duplas.
+    </dd>
+    <dt>Property Binding</dt>
+    <dd>
+        One way data binding, o Property Binding faz vinculação de valores de atributos do componente aos atributos de um elemento HTML.
+    </dd>
+    <dt>Event Binding</dt>
+    <dd>
+        O Event Binding funciona para ouvir eventos nativos do HTML ou eventos que podem ser criados pelo programador, executando algum método do componente através de um evento acionado.
+    </dd>
+    <dt>Two Way Data Binding</dt>
+    <dd>
+        O Two Way Data Binding é um tipo especial de binding, onde além do valor do atributo ser apresentado na tela do usuário, caso o valor seja editado em algum campo de input, o valor será automaticamente alterado internamente no componente.
+    </dd>
+</dl>
+<hr>
+
+<h3>Exemplos</h3>
+<h4>Interpolation</h4>
+<h5>O grande {{ nome }} tem {{ idade }} anos de idade.</h5> <!--Os valores vêm da classe que representa o componente.-->
+<input size="40" type="text" value="O {{ nome }} é muito gente boa!">
+
+<br><br>
+
+<h4>Property Binding</h4>
+<button [disabled]="desabilitado">BUTTON</button><br>
+<!--<button disabled="{{desabilitado}}">BUTTON</button>--><br>
+<img [src]="logoJava" width="250" height="200">
+
+<br><br>
+
+<h4>Event Binding</h4>
+<button (click)="alertar()">Alerta</button>
+<div style="width: 200px; height: 200px; background: purple;" (mousemove)="localizar($event)">
+
+</div>
+<span>{{ x + " - " + y }}</span>
+
+<br><br>
+
+<h4>Two-way Data Binding</h4>
+<h5>{{ texto }}</h5>
+<input type="text" [(ngModel)]="texto">
+
+<br><br>
+
+<h2>Ball Move</h2>
+<div id="quadrado" (keydown)="moverTeclado($event)">
+    <input type="button" value="Play">
+    <div id="ball" [style]="stylePosition">
+    </div>
+</div>
+<button (click)="moverEsquerda()">Esquerda</button>
+<button (click)="moverDireita()">Direita</button>
+<button (click)="moverCima()">Cima</button>
+<button (click)="moverBaixo()">Baixo</button>

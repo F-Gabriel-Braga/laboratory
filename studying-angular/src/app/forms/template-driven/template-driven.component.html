@@ -1,0 +1,58 @@
+<h3>Template Driven Forms (Formulário Orientado a Modelo)</h3>
+<p>
+    Em um formulário orientado por modelo os elementos de controle no formulário estão vinculados a propriedades de dados que possuem validação de entrada. A validação de entrada ajuda a manter a integridade e o estilo dos dados para melhorar a experiência do usuário. Os formulários controlados por modelo usam a vinculação de dados bidirecional (two way data binding) para atualizar o modelo de dados no componente à medida que as alterações são feitas no modelo ou no template. Para utilizar formulários baseado em modelo deve-se importar o modulo FormsModule.
+</p>
+<hr>
+
+<h3>NgForm</h3>
+<p>
+    Cria uma instância de FormGroup e a vincula a um elemento form para rastrear o valor agregado do formulário e o status de validação. Assim que você importa FormsModule, esta diretiva se torna ativa por padrão em todas as tags form.
+</p>
+<hr>
+
+<h3>NgModel</h3>
+<p>
+    Vincula alterações de valor no elemento de formulário anexado com alterações no modelo de dados, permitindo que você responda à entrada do usuário com validação de entrada e tratamento de erros.
+</p>
+<hr>
+
+<div class="container">
+    <h3>Cadastro de Super Heroi</h3>
+    <form #form="ngForm" (ngSubmit)="onSubmit(form)">
+        <div class="mb-3 form-group">
+            <label for="name" class="form-label">Nome</label>
+            <input type="text" class="form-control" id="name" name="name" ngModel required
+                #name="ngModel">
+            <small class="text-danger" *ngIf="name.invalid && name.touched">O campo nome deve ser preenchido!</small>
+        </div>
+
+        <div class="mb-3 form-group">
+            <label for="hero" class="form-label">Nome de super heroi</label>
+            <input type="text" class="form-control" id="hero" name="nameHero" ngModel required #nameHero="ngModel">
+            <small class="text-danger" *ngIf="nameHero.invalid && nameHero.touched">O campo nome de super heroi deve ser preenchido!</small>
+        </div>
+
+        <div class="mb-3 form-group">
+            <label for="force" class="form-label">Poderes</label>
+            <input type="text" class="form-control" id="force" name="force" ngModel required #force="ngModel">
+            <small class="text-danger" *ngIf="force.invalid && force.touched">O campo poderes deve ser preenchido!</small>
+        </div>
+
+        <div class="mb-3 form-group">
+            <label for="age" class="form-label">Idade</label>
+            <input type="number" class="form-control" id="age" name="age" ngModel required min="1" max="130" #age="ngModel">
+            <small class="text-danger" *ngIf="age.invalid && age.touched">Idade inválida!</small>
+        </div>
+
+        <div class="mb-3 form-group">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" name="email" ngModel required email #email="ngModel">
+            <small class="text-danger" *ngIf="email.invalid && email.touched">Email inválido!</small>
+        </div>
+        <button type="submit" class="btn btn-primary" [disabled]="form.invalid">Cadastrar</button>
+    </form>
+
+    <div>
+        {{ hero | json }}
+    </div>
+</div>

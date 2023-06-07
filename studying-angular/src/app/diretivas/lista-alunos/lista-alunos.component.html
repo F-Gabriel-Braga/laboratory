@@ -1,0 +1,28 @@
+<h2>Lista de Alunos</h2>
+<ul>
+    <li *ngFor="let pessoa of lista; let i = index">
+        {{ i+1 }}
+        <ul>
+            <li>Nome: {{ pessoa.nome }}</li>
+            <li>Idade: {{ pessoa.idade }}</li>
+            <li>Curso: {{ pessoa.curso }}</li>
+        </ul>
+        <hr>
+    </li>
+</ul>
+<h3>Adicione um novo aluno:</h3>
+<form>
+    <label>
+        Nome:
+        <input type="text" required="true" #nome>
+    </label><br><br>
+    <label>
+        Idade:
+        <input type="number" required="true" #idade>
+    </label><br><br>
+    <label>
+        Curso:
+        <input type="text" required="true" #curso>
+    </label><br><br>
+    <button (click)="adicionarAluno(nome.value, idade.value, curso.value)">Adicionar</button>
+</form>

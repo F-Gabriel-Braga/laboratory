@@ -1,0 +1,68 @@
+<h2>HTTP</h2>
+<p>
+    HTTP (Hypertext Transfer Protocol, ou Protocolo de Transferência de Hipertexto) trata-se do protocolo de comunicação fundamental da web. Ele permite executar requisições e envio de documentos (HTML, CSS, JavaScript) pela internet.
+</p>
+<hr>
+
+<h2>HttpClient</h2>
+<p>
+    Angular fornece HttpClient, classe de serviço que fornece recursos para requisição e envio de dados via HTTP, que permite a comunicação da aplicação com uma API (back-end). Para utilizar esse serviço é necessário importar o modulo HttpClientModule.
+</p>
+<hr>
+
+<h2>Exemplo (Filmes)</h2>
+<p>
+    <strong>Obs</strong>: Antes de executar a aplicação Angular, é necessário executar o json-server. (npm install json-server / json-server --watch server/films.json)
+</p>
+<p>
+    Documentação Json Server: <a href="https://www.npmjs.com/package/json-server">link</a>
+</p>
+<h3>Filmes</h3>
+<table>
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nome</th>
+            <th>Categoria</th>
+            <th>Ano</th>
+            <th>Excluir</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let film of films">
+            <td>{{ film.id }}</td>
+            <td>{{ film.name }}</td>
+            <td>{{ film.category }}</td>
+            <td>{{ film.year }}</td>
+            <td>
+                <button (click)="excluirIten(film.id)">Remover</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<hr>
+<h3>Cadastrar Filme</h3>
+<form [formGroup]="form" (ngSubmit)="cadastrar()">
+    <label for="name">Nome</label><br>
+    <input type="text" id="name" formControlName="name"> <br><br>
+    <label for="category">Categoria</label><br>
+    <input type="text" id="category" formControlName="category"> <br><br>
+    <label for="year">Ano</label><br>
+    <input type="number" id="year" formControlName="year"> <br><br>
+    <button type="submit">Cadastrar</button>
+</form>
+
+<hr>
+<h2>Modificar Filme</h2>
+<form [formGroup]="formEdit" (ngSubmit)="editar()">
+    <label for="id">Id</label><br>
+    <input type="number" id="id" formControlName="id"> <br><br>
+    <label for="name">Nome</label><br>
+    <input type="text" id="name" formControlName="name"> <br><br>
+    <label for="category">Categoria</label><br>
+    <input type="text" id="category" formControlName="category"> <br><br>
+    <label for="year">Ano</label><br>
+    <input type="number" id="year" formControlName="year"> <br><br>
+    <button type="submit">Editar</button>
+</form>

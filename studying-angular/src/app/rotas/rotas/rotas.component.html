@@ -1,0 +1,30 @@
+<h3>Rotas</h3>
+<p>
+    Routas são caminhos que controlam os componentes renderizados. Para criar um projeto Angular com modulo de roteamento com Angular CLI, execute o comando <strong>ng new [app-name] --routing</strong>. O modulo de roteamento deve ser importado no modulo raiz do projeto.
+</p>
+<hr>
+
+<h3>Routes e Route</h3>
+<p>
+    Route é um objeto de configuração que define uma única rota. Um conjunto de rotas é coletado em uma matriz que definir uma configuração de rotas. Essa matriz é definida como Routes.
+</p>
+<p>
+    O objeto Route possui as propriedades <strong>path</strong>, que representa o caminho da rota, e <strong>component</strong>, que define o componente que deve ser renderizado. Para aplicar o sistema de roteamento no template (HTML) é necessário definir a tag <strong>router-outlet</strong>.
+</p>
+<hr>
+
+<h3>Router</h3>
+<p>
+    "Um serviço que fornece navegação entre visualizações e recursos de manipulação de URL". Este serviço oferece o método <strong>navigate()</strong> que possibilita a navegação com base em uma matriz de comandos fornecida e um ponto de partida.
+</p>
+<hr>
+
+<h3>Guard</h3>
+<p>
+    Guards são serviços para controle de acesso as rotas. Para criar um novo Guard com Angular CLI execute o comando <strong>ng generate guard [nome do guard] / ng g g [nome do guard]</strong>.
+</p>
+<ul>
+    <li>CanActivate (controle de acesso a entrada de rotas)</li>
+    <li>CanActivateChild (controle de acesso a entrada de rotas filhas)</li>
+    <li>CanDeactivate (controle de acesso a saída de rotas)</li>
+</ul>

@@ -1,0 +1,57 @@
+<h3>Pipes</h3>
+<p>
+    Funções simples para usar em expressões de template que aceita um valor de entrada e retorna um valor tranformado. Para criar uma nova Pipe com Angular CLI execute o comando <strong>ng generate pipe [nome da pipe] / ng g p [nome da pipe]</strong>.
+</p>
+<hr>
+
+<h3>uppercase</h3>
+<p>
+    Transforma todas as letras de uma string em maiúsculas. 
+</p>
+<hr>
+
+<h3>lowercase</h3>
+<p>
+    Transforma todas as letras de uma string em minúsculas. 
+</p>
+<hr>
+
+<h3>number</h3>
+<p>
+    Formata números espicificando por parâmetro a quantidade mínima de números inteiros e a quantidade mínima e maxima de numeros decimais.
+</p>
+<hr>
+
+<h3>date</h3>
+<p>
+    Formata um objeto do tipo Date a partir do modelo de data passado pôr parâmetro.
+</p>
+<hr>
+
+<h3>json</h3>
+<p>
+    Converte um objeto para um modelo de visualização Json.
+</p>
+<hr>
+
+<h3>Pipes Customizadas</h3>
+<p>
+    É possível criar Pipes que realizam processos customizados. Para criar uma nova Pipe execute o comando <strong>ng generate pipe nome-pipe</strong> ou <strong>ng g p nome-pipe</strong>.
+</p>
+<hr>
+
+<h3>Musica</h3>
+<p>Nome: {{ music.name | uppercase }}</p>
+<p>Autor: {{ music.author | lowercase }}</p>
+<p>Numero de visualizações: {{ music.view | number:"1.1-2" }} bilhões</p>
+<p>Data de lançamento: {{ music.lancamento | date:"dd/MM/yyyy" }}</p>
+<br>
+<p>{{ music | json }}</p>
+<hr>
+
+<h3>Pipes Customizadas (Pipe arraySum)</h3>
+<p>{{ [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] | arraySum }}</p>
+<hr>
+
+<h3>Pipe Customizadas (camelCase)</h3>
+<p>{{ "EstuDar AngUlar é muiTo maSSa." | camelCase }}</p>

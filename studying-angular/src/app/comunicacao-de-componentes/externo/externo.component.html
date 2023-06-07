@@ -1,0 +1,49 @@
+<h2>Comunicação entre componentes</h2>
+<p>
+    É a forma como utilizamos os recursos do Angular para transmitir dados entre os componentes na aplicação.
+</p>
+<hr>
+
+<h2>Input</h2>
+<p>
+    Entrada de dados de um componente pai para um componente filho. Utiliza-se o decorator @Input() para atribuir a uma propriedade do componente a entrada de dados do seu componente pai.
+</p>
+<hr>
+
+<h2>Output</h2>
+<p>
+    Saida de dados de um componente filho para um componente pai. Aplica-se o decorator @Output() sobre um objeto do tipo EventEmitter que enviará os dados via evento.
+</p>
+<hr>
+
+<h2>Exemplo</h2>
+<div id="container">
+    <h2>Externo</h2>
+    <!--
+    Input
+    {{ nomeExterno }} nomeExterno é um variavel da classe ExternoComponent
+    <app-interno [nomeInterno]="nomeExterno"></app-interno>
+    Inserindo o valor do componente Externo ao componete Interno
+    {{ nomeExterno }}
+    <app-interno (enviaNome)="recebeNome($event)"></app-interno>-->
+    {{ "Nome: " + pessoa.nome + " Idade: " + pessoa.idade }}
+    <app-interno [pessoa]="pessoa" #interno></app-interno>
+</div>
+
+<hr>
+<h2>Template Variable</h2>
+<p>
+    Template Variables são variáveis que o angular nos permite definir dentro dos elementos HTML do template do seu componente. A sintaxe de Template Variable é "#" e o nome que você definir.
+</p>
+{{ texto }}<br>
+<!--Defino um variavel "campo" e tem o valor de um objeto DOM HTMLElement-->
+<input type="text" #campo value="Valor do input">
+<button (click)="mostrar(campo.value)">Mostrar</button>
+<hr>
+
+<h2>ViewChild</h2>
+<p>
+    View Child permite acessar dados, atributos e métodos de elementos ou componentes do template HTML. Utiliza-se o decorator @ViewChild para anotar a propriedade que receberá o elemento HTML ou o componente Angular.
+</p>
+<h3>Dado interno: {{ interno.propriedade }}</h3>
+<h3>Campo possui o valor: {{ campo.value }}</h3>

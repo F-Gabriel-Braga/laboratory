@@ -1,0 +1,89 @@
+<!--App Component é o principal componente de um projeto. Ele é criado automaticamente quando criamos um novo projeto pelo Angular CLI.-->
+<nav class="navbar fixed-top navbar-dark bg-primary">
+  <div class="container-fluid">
+    <a class="navbar-brand" routerLink="/introduction">Angular</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+      aria-controls="offcanvasNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Angular</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+          <li class="nav-item">
+            <a class="nav-link text-primary" routerLink="/introduction">Introdução</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-primary" routerLink="/component-angular">Componentes</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-primary" routerLink="/data-binding">Data Binding</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-primary" routerLink="/post-simulator">Post Simulator</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-primary" routerLink="/in-out">Input and Output</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-primary" routerLink="/diretivas">Diretivas</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-primary" routerLink="/lista-alunos">Lista de Alunos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-primary" routerLink="/ciclo-de-vida">Ciclo de Vida</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-primary" routerLink="/pipes">Pipes</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-primary" routerLink="/modulos">Modulos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-primary" routerLink="/template-driven">Template Driven Forms</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-primary" routerLink="/data-driven">Data Driven Forms (Reactive Forms)</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-primary" routerLink="/foods">Foods (Serviços)</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-primary" routerLink="/observable">Observables (RXJS)</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-primary" routerLink="/http">Filmes (HTTP)</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-primary" routerLink="/routes">Rotas</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <div class="container-fluid">
+    <a class="navbar-brand" routerLink="/introduction">Angular</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+      aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+
+      </div>
+    </div>
+  </div>
+</nav>
+
+<div class="container mt-3">
+  <router-outlet>
+  </router-outlet>
+</div>

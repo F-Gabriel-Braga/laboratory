@@ -1,0 +1,47 @@
+#container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#post {
+    width: 350px;
+    height: 450px;
+    border-radius: 5px;
+    overflow: hidden;
+    background-color: rgb(89, 89, 89);
+    
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#post h2 {
+    width: 100%;
+    height: 15%;
+    margin: 0 20px;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+#post #img {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    background-color: rgb(189, 189, 189);
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+#post #img img {
+    width: 100%;
+    height: 100%;
+}
+
+#post #paragrafo {
+    width: 100%;
+    padding: 30px;
+    color: white;
+}

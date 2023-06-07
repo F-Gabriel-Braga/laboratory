@@ -1,0 +1,58 @@
+<h3>Data Driven Forms (Formulários Reativos)</h3>
+<p>
+    Os formulários reativos fornecem uma abordagem baseada em modelo para lidar com entradas de formulário cujos valores mudam ao longo do tempo. Cada alteração no estado do formulário retorna um novo estado, que mantém a integridade do modelo entre as alterações. Para utilizar formulários reativos deve-se importar o modulo ReactiveFormsModule.
+</p>
+<hr>
+
+<h3>FormGroup</h3>
+<p>
+    Rastreia o valor e o estado de validade de um grupo de FormControlinstâncias.
+</p>
+<hr>
+
+<h3>FormControl</h3>
+<p>
+    Rastreia o valor e o status de validação de um controle de formulário individual.
+</p>
+<hr>
+
+<h3>FormArray</h3>
+<p>
+    Rastreia o valor e o estado de validade de uma matriz de FormControl.
+</p>
+<hr>
+
+<h3>FormBuilder</h3>
+<p>
+    O FormBuilder fornece uma sintaxe curta para a criação de instâncias de a FormControl, FormGroup, ou FormArray.
+</p>
+<hr>
+
+<div class="container">
+    <h3>Caixa de Super Mercado</h3>
+    <form [formGroup]="formulario" (ngSubmit)="onSubmit()">
+        <div class="form-group mb-3" [ngClass]="aplicaCssError('descriptions')">
+            <label for="description" class="form-label">Descrição</label>
+            <div formArrayName="descriptions" *ngFor="let item of descriptions.controls; let i = index">
+                <input type="text" class="form-control item" id="description" [formControlName]="i">
+            </div>
+            <button type="button" class="btn btn-primary" (click)="addItem()">Adicionar novo item</button>
+        </div>
+        <div class="form-group mb-3" [ngClass]="aplicaCssError('client')">
+            <label for="client" class="form-label">Cliente</label>
+            <input type="text" class="form-control" id="client" formControlName="client">
+            <small class="text-danger">O campo cliente deve ser preenchido.</small>
+        </div>
+        <div class="form-group mb-3" [ngClass]="aplicaCssError('total')">
+            <label for="total" class="form-label">Total</label>
+            <input type="number" class="form-control" id="total" formControlName="total">
+            <small class="text-danger">O valor total está inválido.</small>
+        </div>
+        <button type="submit" class="btn btn-success me-3" [disabled]="formulario.invalid">Vender</button>
+        <button type="button" class="btn btn-danger" (click)="onReset()">Cancelar</button>
+    </form>
+
+    <div>
+        {{ formulario.value | json }}
+    </div>
+</div>
