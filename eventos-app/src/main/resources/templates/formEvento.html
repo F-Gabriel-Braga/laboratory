@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>EventosApp</title>
+    <link type="text/css" rel="stylesheet" href="/css/main.css" th:href="@{/css/main.css}"/>
+
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" th:href="@{/materialize/css/materialize.min.css}"  media="screen,projection"/>
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="nav-wrapper">
+                <a href="#" class="brand-logo">Cadastro de Evento</a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a class="waves-effect waves-light btn" th:href="@{/eventos/}">Lista de Eventos</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div class="container form-c">
+
+        <th:block th:include="mensagem"></th:block>
+
+        <form th:action="@{/eventos/cadastrar}" method="post">
+            Nome:<input type="text" value="" name="nome"/>
+            <div class="row">
+                <div class="input-field col s6">
+                    Local:<input type="text" value="" name="local"/>
+                </div>
+                <div class="input-field col s3">
+                    Data:<input type="date" value="" name="data"/>
+                </div>
+                <div class="input-field col s3">
+                    Horário:<input type="time" value="" name="horario"/>
+                </div>
+            </div>
+            <button class="waves-effect waves-light btn" type="submit">Salvar</button>
+        </form>
+    </div>
+
+
+    <!--JavaScript at end of body for optimized loading-->
+    <script type="text/javascript" src="js/materialize.min.js" th:src="@{/materialize/js/materialize.min.js}"></script>
+</body>
+</html>

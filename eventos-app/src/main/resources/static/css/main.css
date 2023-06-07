@@ -1,0 +1,23 @@
+header nav {
+    padding: 0 20px;
+    background-color: #00acc1;
+}
+
+.detalhes-evento {
+    box-shadow: 0 0 5px gray;
+    padding: 20px;
+    margin-bottom: 60px !important;
+}
+
+.form-c {
+    box-shadow: 0 0 5px gray;
+    padding: 20px;
+}
+
+.form-c form button {
+    margin-top: 30px !important;
+}
+
+.form-c table {
+    margin-top: 30px !important;
+}
