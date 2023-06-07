@@ -1,0 +1,84 @@
+*{
+	box-sizing:border-box;
+}
+
+@font-face{
+	font-family:font_externa;
+	src:url(font/pressstart2p-webfont.woff);
+}
+
+body{
+	width: 100%;
+	height: 100%;
+	min-width:500px;
+	background-color: rgba(164, 178, 185, 0.548);
+}
+#calc{
+	width:350px;
+	min-width:350px;
+	max-width:350px;
+	height:600px;
+	min-height:600px;
+	max-height:600px;
+	border-radius:15px;
+	background-color:#ccc;
+	position:fixed;
+	left:50%;
+	top:50%;
+	margin-left:-175px;
+	margin-top:-300px;
+	box-shadow:0 0 100px black;
+}
+#titulo{
+	font-family:font_externa;
+	font-size:25px;
+	margin-top:20px;
+	text-align:center;
+	height:30px;
+}
+#input{
+	margin-top:20px;
+	width:100%;
+	height:90px;
+}
+#visor{
+	font-family:font_externa;
+	width:80%;
+	margin:5px 10% 15px 10%;
+	height:50px;
+	font-size:25px;
+	padding-left:10px;
+	padding-right:10px;
+
+}
+#btns{
+	width:100%;
+	text-align:center;
+}
+.btn1{
+	font-family:font_externa;
+	margin:10px;
+	width:60px;
+	height:60px;
+	background-color:white;
+	font-size:20px;
+	cursor:pointer;
+}
+.btn1:hover{
+	border:0;
+}
+.btn2{
+	font-weight:bolder;
+	font-family:font_externa;
+	text-align:center;
+	padding:2px;
+	margin:10px;
+	width:50px;
+	height:50px;
+	background-color:white;
+	font-size:20px;
+	cursor:pointer;
+}
+.btn2:hover{
+	border:0;
+}
