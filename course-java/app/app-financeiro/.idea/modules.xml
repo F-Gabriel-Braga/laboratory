@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../app/app-api-publica/app-api-publica.iml" filepath="$PROJECT_DIR$/../app/app-api-publica/app-api-publica.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../app/app-calculo/app-calculo.iml" filepath="$PROJECT_DIR$/../app/app-calculo/app-calculo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../app/app-financeiro/app-financeiro.iml" filepath="$PROJECT_DIR$/../app/app-financeiro/app-financeiro.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../app/app-logging/app-logging.iml" filepath="$PROJECT_DIR$/../app/app-logging/app-logging.iml" />
+    </modules>
+  </component>
+</project>

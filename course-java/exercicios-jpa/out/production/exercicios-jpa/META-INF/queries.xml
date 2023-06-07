@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-mappings xmlns="http://xmlns.jcp.org/xml/ns/persistence/orm" version="2.1">
+
+    <named-query name="obterFilmesNotaMaiorQue">
+        <query>
+            select distinct f from Filme f
+            join fetch f.atores
+            where f.nota > :nota
+        </query>
+    </named-query>
+
+    <named-native-query name="obterMediaNotasFilmes" result-set-mapping="notaFilmeMap">
+        <query>
+            select avg(film_nota) as media from filmes
+        </query>
+    </named-native-query>
+
+    <sql-result-set-mapping name="notaFilmeMap">
+        <constructor-result target-class="modelo.consulta.NotaFilme">
+            <column name="media" class="java.lang.Double"/>
+        </constructor-result>
+    </sql-result-set-mapping>
+
+</entity-mappings>

@@ -1,0 +1,21 @@
+package estruturas_de_controle;
+
+public class Continue {
+    public static void main(String[] args) {
+        for(int i = 0; i < 10; i++) {
+            if(i % 2 == 1) {
+                continue;
+            }
+            System.out.println(i);
+        }
+
+        System.out.print("\n");
+
+        for(int i = 0; i < 10; i++) {
+            if(i % 2 == 0) {
+                continue;
+            }
+            System.out.println(i);
+        }
+    }
+}

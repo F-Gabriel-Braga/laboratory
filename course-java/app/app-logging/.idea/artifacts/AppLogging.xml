@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="AppLogging">
+    <output-path>$PROJECT_DIR$/../app-calculo/libs</output-path>
+    <root id="archive" name="AppLogging.jar">
+      <element id="module-output" name="app-logging" />
+    </root>
+  </artifact>
+</component>
