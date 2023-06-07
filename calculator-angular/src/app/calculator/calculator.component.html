@@ -1,0 +1,31 @@
+<div id="calculator">
+    <div id="top-bar">
+        <div class="ball"></div>
+        <div class="ball"></div>
+        <div class="ball"></div>
+    </div>
+    <div id="terminal">
+        <input type="text" name="result" id="result" placeholder="0">
+    </div>
+    <div id="buttons">
+        <button class="button-top" (click)="clear()">AC</button>
+        <button class="button-top" (click)="backspace()">⌫</button>
+        <button class="button-top" (click)="set('%')">%</button>
+        <button class="button-operator" (click)="set('/')">÷</button>
+        <button class="button-number" (click)="set('7')">7</button>
+        <button class="button-number" (click)="set('8')">8</button>
+        <button class="button-number" (click)="set('9')">9</button>
+        <button class="button-operator" (click)="set('*')">×</button>
+        <button class="button-number" (click)="set('4')">4</button>
+        <button class="button-number" (click)="set('5')">5</button>
+        <button class="button-number" (click)="set('6')">6</button>
+        <button class="button-operator" (click)="set('-')">-</button>
+        <button class="button-number" (click)="set('1')">1</button>
+        <button class="button-number" (click)="set('2')">2</button>
+        <button class="button-number" (click)="set('3')">3</button>
+        <button class="button-operator" (click)="set('+')">+</button>
+        <button id="zero" class="button-number" (click)="set('0')">0</button>
+        <button class="button-number" (click)="set('.')">,</button>
+        <button class="button-operator" (click)="calc()">=</button>
+    </div>
+</div>

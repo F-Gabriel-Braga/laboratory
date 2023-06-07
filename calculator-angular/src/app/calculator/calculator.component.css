@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#calculator {
+    width: 350px;
+    height: 450px;
+    background-color: rgb(69, 69, 69);
+    border-radius: 13px;
+    border: 2px solid rgb(69, 69, 69);
+    overflow: hidden;
+    opacity: 0.95;
+}
+
+#top-bar {
+    height: 8%;
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+
+#top-bar .ball {
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    margin-left: 10px;
+}
+
+#top-bar .ball:first-child {
+    margin-left: 0;
+}
+
+.ball:nth-child(1) {
+    background-color: rgb(243, 50, 50);
+}
+
+.ball:nth-child(2) {
+    background-color: rgb(209, 209, 44);
+}
+
+.ball:nth-child(3) {
+    background-color: rgb(38, 150, 38);
+}
+
+#terminal {
+    width: 100%;
+    height: 20%;
+}
+
+#terminal input {
+    width: 100%;
+    height: 100%;
+    padding: 10px 20px;
+    text-align: right;
+    font-size: 55px;
+    color: white;
+    border: none;
+    border-radius: none;
+    background: none;
+}
+
+#terminal input:focus {
+    border: none;
+    outline: none;
+}
+
+#buttons {
+    width: 100%;
+    height: 72%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    column-gap: 2px;
+    row-gap: 2px;
+}
+
+#buttons #zero {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 4;
+    grid-row-start: 5;
+}
+
+#buttons button {
+    border: none;
+    border-radius: none;
+    font-size: 33px;
+    color: white;
+}
+
+.button-top {
+    background-color: rgb(90, 90, 90);
+}
+
+.button-operator {
+    background-color: rgb(243, 163, 60);
+}
+
+.button-number {
+    background-color: rgb(120, 120, 120);
+}
