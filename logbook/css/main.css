@@ -1,0 +1,123 @@
+body{
+	background-color:#CCC;
+}
+#all{
+	margin:0% 7% 0% 7%;
+	background:#fff;
+}
+#tema{
+	padding:30px 0px 30px 0px; 
+	width:100%;
+	font-size:200%;
+	font-family:verdana;
+	text-align:center; 
+}
+		tr, td{
+			background-color:#ccc;
+			border-color:#000;
+		}
+		td{
+			width:150px;height:10px; 
+		}
+		table{
+			margin:10px 10px 10px 10px;
+			border:1px solid black;
+		}
+		#blue{
+			color:blue;
+			height:30px;
+		}
+		#red{
+			color:red;
+			height:30px;
+		}
+		#font{
+			font-size:130%;
+			font-family: calibri;
+		}
+#corpo{
+	padding:10px 100px 5px 100px;
+}
+li a{
+	color:red;
+	font-size:120%
+}
+h2{
+	font-size:150%;
+	font-family:verdana;
+}
+h3{
+	padding-left:50px;
+	font-size:150%;
+	font-family:verdana;
+}
+p{
+	padding-left:20px;
+	text-align:justify;
+	font-family:calibri;
+	font-size:150%;
+}
+#p{
+	padding-left:70px;
+	text-align:justify;
+	font-family:calibri;
+	font-size:150%;
+}
+#imag{
+	width:25%;
+	border:2px solid red;
+}
+#imag2{
+	width:90%;
+}
+#header{
+	text-align:center;
+	background:#fff;
+	height:200px;
+}
+#menu{
+	padding:2px 0px 2px 0px;
+	border-top:solid;
+	border-bottom:solid;
+	border-color:#ccc;
+	border-width:2px;
+}
+.butões{
+	border-width:0px;
+	vertical-align:top;
+	width: 16%;
+	font-weight: bold;
+	background-color:#fff;
+	height:50px;
+	font-size:80%;
+	font-weight:bolder;
+	font-family:calibri;
+		
+}
+		.butões:hover{
+			border-radius:7px;
+			transition:0.5s;
+			background:#aaa;
+			color:#fff;
+		}
+nav a{
+	text-decoration:none;
+}
+header a{
+	text-decoration:none;
+	color:#000;
+}
+#list{
+	font-size:140%;
+	font-family:calibri;
+}
+#cabecalho{
+	margin:0px 100px 0px 200px;
+	padding-top:30px;
+	font-family:fantasy;
+	text-align:center;
+	font-size:700%;
+}
+#align{
+	text-align:center;
+}
