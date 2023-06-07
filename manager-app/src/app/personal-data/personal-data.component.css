@@ -1,0 +1,13 @@
+#image {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#image img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 1px solid rgb(31, 95, 213);
+}

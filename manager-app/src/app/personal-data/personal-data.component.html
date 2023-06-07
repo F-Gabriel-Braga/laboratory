@@ -1,0 +1,17 @@
+<ng-container *ngIf="user != null">
+    <div id="image">
+        <img [src]="user.image">
+    </div>
+    <h3>Usuário:</h3>
+    <p>{{ user.username }}</p>
+    <h3>Nome:</h3>
+    <p>{{ user.name }}</p>
+    <h3>Cargo:</h3>
+    <p>{{ user.job }}</p>
+    <h3>Endereço:</h3>
+    <p>{{ user.address }}</p>
+    <h3>Email:</h3>
+    <p>{{ user.email }}</p>
+
+    <button type="button" class="btn btn-danger" (click)="exit()">Sair</button>
+</ng-container>

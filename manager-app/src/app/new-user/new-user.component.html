@@ -1,0 +1,34 @@
+<div>
+    <h3>Lista de usuários</h3>
+    <p *ngIf="listEmpty; else list">Não há nenhum usuário registrado!</p>
+    <ng-template #list>
+        <p *ngFor="let user of listUsers">
+            <strong>Nome: </strong> {{ user.name }}
+        </p>
+    </ng-template>
+</div>
+
+<h3>Novo usuário</h3>
+<form>
+    <label for="username" class="form-label">Usuário</label>
+    <input type="text" class="form-control" id="username" #username>
+    <label for="pass" class="form-label">Senha</label>
+    <input type="password" class="form-control" id="pass" #pass>
+    <label for="name" class="form-label">Nome</label>
+    <input type="text" class="form-control" id="name" #name>
+    <label for="job" class="form-label">Cargo</label>
+    <input type="text" class="form-control" id="job" #job>
+    <label for="address" class="form-label">Endereço</label>
+    <input type="text" class="form-control" id="address" #address>
+    <label for="email" class="form-label">Email</label>
+    <input type="email" class="form-control" id="email" #email>
+    <label for="image" class="form-label">Imagem</label>
+    <input type="url" class="form-control" id="image" #img>
+    <div class="form-check mb-3">
+        <input class="form-check-input" type="checkbox" id="adm" #adm>
+        <label class="form-check-label" for="adm">
+            Administrador
+        </label>
+    </div>
+    <button type="button" class="btn btn-primary" (click)="add(username.value, name.value, pass.value, job.value, address.value, email.value, img.value, adm.checked)">Adicionar</button>
+</form>

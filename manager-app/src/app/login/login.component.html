@@ -1,0 +1,10 @@
+<div id="login" class="mt-3">
+    <h3 class="text-center">Login</h3>
+    <div class="mb-3">
+        <label for="username" class="form-label">Usuário</label>
+        <input type="text" class="form-control" id="username" #name>
+        <label for="pass" class="form-label">Senha</label>
+        <input type="password" class="form-control" id="pass" #pass>
+        <button type="button" class="btn btn-primary mt-3" (click)="logar(name.value, pass.value)">Entrar</button>
+    </div>
+</div>
