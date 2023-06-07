@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width" />
+        <title>Lista de Convidados</title>
+        <link rel="stylesheet" th:href="@{/css/main.css}"/>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="body">
+            <div class="title">
+                <h2>Lista de convidados</h2>
+            </div>
+            <div class="container">
+                <form class="form" method="POST" th:object="${guest}" th:action="@{/guests}">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Nome" th:field="*{name}"/>
+                        <input type="text" class="form-control" placeholder="Acompanhantes" th:field="*{amountCompanions}"/>
+                        <button type="submit" class="btn">Adicionar</button>
+                    </div>
+                </form>
+
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>Acompanhantes</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr th:each="guest : ${guests}">
+                            <td th:text="${guest.name}"></td>
+                            <td th:text="${guest.amountCompanions}"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </body>
+</html>
