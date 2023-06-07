@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<%- include('../../partials/header'); %>
+
+<body>
+    <%- include('../../partials/navbar'); %>
+    <div class="container">
+        <div class="card mt-4">
+            <div class="card-header">
+                <div class="w-100 d-flex flex-row align-items-center justify-content-between">
+                    <h2>Categorias</h2>
+                    <a href="/admin/categories/new" class="btn btn-warning rounded-circle btn-add d-flex align-items-center justify-content-center">
+                        <span class="material-symbols-outlined">add</span>
+                    </a>
+                </div>
+            </div>
+            <div class="card-body">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Título</th>
+                            <th>Slug</th>
+                            <th>Editar</th>
+                            <th>Excluir</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% categories.forEach(category => { %> 
+                            <tr>
+                                <td><%= category.id %></td>
+                                <td><%= category.title %></td>
+                                <td><%= category.slug %></td>
+                                <td>
+                                    <a href="/" class="text-warning">
+                                        <span class="material-symbols-outlined">edit</span>
+                                    </a>
+                                </td>
+                                <td>
+                                    <a href="/" class="text-danger">
+                                        <span class="material-symbols-outlined">delete</span>
+                                    </a>
+                                </td>
+                            </tr>
+                        <% }) %> 
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+
+<%- include('../../partials/footer'); %>
+
+</html>
